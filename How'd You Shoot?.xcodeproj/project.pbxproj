@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		937DF8DF2817324900E49CB9 /* GolfTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937DF8DE2817324900E49CB9 /* GolfTableViewCell.swift */; };
 		93EEEC072816EE9600D3E757 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EEEC062816EE9600D3E757 /* AppDelegate.swift */; };
 		93EEEC092816EE9600D3E757 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EEEC082816EE9600D3E757 /* SceneDelegate.swift */; };
 		93EEEC0B2816EE9600D3E757 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EEEC0A2816EE9600D3E757 /* ViewController.swift */; };
 		93EEEC0E2816EE9600D3E757 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93EEEC0C2816EE9600D3E757 /* Main.storyboard */; };
 		93EEEC102816EEAC00D3E757 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93EEEC0F2816EEAC00D3E757 /* Assets.xcassets */; };
 		93EEEC132816EEAC00D3E757 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93EEEC112816EEAC00D3E757 /* LaunchScreen.storyboard */; };
+		93EEEC1B2817031B00D3E757 /* GolfData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EEEC1A2817031A00D3E757 /* GolfData.swift */; };
+		93EEEC1D2817036700D3E757 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EEEC1C2817036700D3E757 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		937DF8DE2817324900E49CB9 /* GolfTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GolfTableViewCell.swift; sourceTree = "<group>"; };
 		93EEEC032816EE9600D3E757 /* How'd You Shoot?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How'd You Shoot?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EEEC062816EE9600D3E757 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93EEEC082816EE9600D3E757 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		93EEEC0F2816EEAC00D3E757 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93EEEC122816EEAC00D3E757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93EEEC142816EEAC00D3E757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93EEEC1A2817031A00D3E757 /* GolfData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GolfData.swift; sourceTree = "<group>"; };
+		93EEEC1C2817036700D3E757 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +64,10 @@
 			children = (
 				93EEEC062816EE9600D3E757 /* AppDelegate.swift */,
 				93EEEC082816EE9600D3E757 /* SceneDelegate.swift */,
+				93EEEC1A2817031A00D3E757 /* GolfData.swift */,
 				93EEEC0A2816EE9600D3E757 /* ViewController.swift */,
+				93EEEC1C2817036700D3E757 /* DetailViewController.swift */,
+				937DF8DE2817324900E49CB9 /* GolfTableViewCell.swift */,
 				93EEEC0C2816EE9600D3E757 /* Main.storyboard */,
 				93EEEC0F2816EEAC00D3E757 /* Assets.xcassets */,
 				93EEEC112816EEAC00D3E757 /* LaunchScreen.storyboard */,
@@ -140,7 +149,10 @@
 			files = (
 				93EEEC0B2816EE9600D3E757 /* ViewController.swift in Sources */,
 				93EEEC072816EE9600D3E757 /* AppDelegate.swift in Sources */,
+				93EEEC1D2817036700D3E757 /* DetailViewController.swift in Sources */,
 				93EEEC092816EE9600D3E757 /* SceneDelegate.swift in Sources */,
+				93EEEC1B2817031B00D3E757 /* GolfData.swift in Sources */,
+				937DF8DF2817324900E49CB9 /* GolfTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
