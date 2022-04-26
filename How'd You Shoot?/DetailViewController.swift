@@ -7,6 +7,13 @@
 
 import UIKit
 
+private let dateFormatter: DateFormatter = {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = .short
+    dateFormatter.timeStyle = .short
+    return dateFormatter
+}()
+
 class DetailViewController: UIViewController {
     @IBOutlet weak var courseTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -17,41 +24,76 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var p3ScoreTextField: UITextField!
     @IBOutlet weak var p4NameTextField: UITextField!
     @IBOutlet weak var p4ScoreTextField: UITextField!
+    @IBOutlet weak var saveBarButton: UIBarButtonItem!
     
     
     var golfData: GolfData!
+    
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if golfData == nil {
-            golfData = GolfData(course: "", score: nil, date: Date().addingTimeInterval(24*60*60), p2Name: "", p2Score: nil, p3Name: "", p3Score: nil, p4Name: "", p4Score: nil)
-            courseTextField.becomeFirstResponder()
+            golfData = GolfData(course: "", score: 0 , date: Date().addingTimeInterval(24*60*60), p2Name: "", p2Score: 0, p3Name: "", p3Score: 0, p4Name: "", p4Score: 0)
         }
+        updateUserInterface()
     }
     
+    private let dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEE, MMM d"
+        return dateFormatter
+    }()
+    
+    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
+        self.view.endEditing(true)
+        golfData.date = datePicker.date
+    }
     
     func updateUserInterface() {
         courseTextField.text = golfData.course
         datePicker.date = golfData.date
-//        scoreTextField.text = "\(golfData.score)"
+        scoreTextField.text = "\(golfData.score)"
         p2NameTextField.text = golfData.p2Name
         p3NameTextField.text = golfData.p3Name
         p4NameTextField.text = golfData.p4Name
+        p2ScoreTextField.text = "\(golfData.p2Score)"
+        p3ScoreTextField.text = "\(golfData.p3Score)"
+        p4ScoreTextField.text = "\(golfData.p4Score)"
+        
+        enableDisableSaveButton(text: courseTextField.text!)
+
     }
+
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        golfData = GolfData(course: golfData.course, score: golfData.score, date: datePicker.date, p2Name: golfData.p2Name, p2Score: golfData.p2Score, p3Name: golfData.p3Name, p3Score: golfData.p3Score, p4Name: golfData.p4Name, p4Score: golfData.p4Score)
+        golfData = GolfData(course: courseTextField.text!, score: Int(scoreTextField.text ?? "")!, date: datePicker.date, p2Name: p2NameTextField.text!, p2Score: Int(p2ScoreTextField.text ?? "")!, p3Name: p3NameTextField.text!, p3Score: Int(p3ScoreTextField.text ?? "")!, p4Name: p4NameTextField.text!, p4Score: Int(p4ScoreTextField.text ?? "")!)
+    }
+    
+    func enableDisableSaveButton(text: String) {
+        if text.count > 0 {
+            saveBarButton.isEnabled = true
+        } else {
+            saveBarButton.isEnabled = false
+        }
+    }
+    
+    
+    @IBAction func textFieldEditingChanged(_ sender: UITextField) {
+        enableDisableSaveButton(text: sender.text!)
     }
     
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
-    }
-    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        let isPresentingInAddMode = presentingViewController is UINavigationController
+        if isPresentingInAddMode {
+            dismiss(animated: true, completion: nil)
+        } else {
+            navigationController?.popViewController(animated: true)
+        }
     }
     
-    @IBAction func deleteButtonPressed(_ sender: UIButton) {
-    }
     
-
 }

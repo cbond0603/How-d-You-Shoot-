@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9330148C281752D500807B5F /* GetGolfData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9330148B281752D500807B5F /* GetGolfData.swift */; };
+		934029762817810400881743 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934029752817810400881743 /* SplashScreenViewController.swift */; };
 		937DF8DF2817324900E49CB9 /* GolfTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937DF8DE2817324900E49CB9 /* GolfTableViewCell.swift */; };
 		93EEEC072816EE9600D3E757 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EEEC062816EE9600D3E757 /* AppDelegate.swift */; };
 		93EEEC092816EE9600D3E757 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EEEC082816EE9600D3E757 /* SceneDelegate.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9330148B281752D500807B5F /* GetGolfData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGolfData.swift; sourceTree = "<group>"; };
+		934029752817810400881743 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		937DF8DE2817324900E49CB9 /* GolfTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GolfTableViewCell.swift; sourceTree = "<group>"; };
 		93EEEC032816EE9600D3E757 /* How'd You Shoot?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How'd You Shoot?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EEEC062816EE9600D3E757 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,8 +69,10 @@
 				93EEEC062816EE9600D3E757 /* AppDelegate.swift */,
 				93EEEC082816EE9600D3E757 /* SceneDelegate.swift */,
 				93EEEC1A2817031A00D3E757 /* GolfData.swift */,
+				9330148B281752D500807B5F /* GetGolfData.swift */,
 				93EEEC0A2816EE9600D3E757 /* ViewController.swift */,
 				93EEEC1C2817036700D3E757 /* DetailViewController.swift */,
+				934029752817810400881743 /* SplashScreenViewController.swift */,
 				937DF8DE2817324900E49CB9 /* GolfTableViewCell.swift */,
 				93EEEC0C2816EE9600D3E757 /* Main.storyboard */,
 				93EEEC0F2816EEAC00D3E757 /* Assets.xcassets */,
@@ -148,6 +154,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				93EEEC0B2816EE9600D3E757 /* ViewController.swift in Sources */,
+				9330148C281752D500807B5F /* GetGolfData.swift in Sources */,
+				934029762817810400881743 /* SplashScreenViewController.swift in Sources */,
 				93EEEC072816EE9600D3E757 /* AppDelegate.swift in Sources */,
 				93EEEC1D2817036700D3E757 /* DetailViewController.swift in Sources */,
 				93EEEC092816EE9600D3E757 /* SceneDelegate.swift in Sources */,
