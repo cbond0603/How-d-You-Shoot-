@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addBarButton: UIBarButtonItem!
     @IBOutlet weak var editBarButton: UIBarButtonItem!
+    @IBOutlet weak var homeButton: UIButton!
     
 //    var golfDataArray: [GolfData] = []
     var getGolfData = GetGolfData()

@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		667B402AB749B23BA4CBFDC5 /* libPods-How'd You Shoot?.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 861E259A48C8B1BD98B08F2F /* libPods-How'd You Shoot?.a */; };
 		9330148C281752D500807B5F /* GetGolfData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9330148B281752D500807B5F /* GetGolfData.swift */; };
 		934029762817810400881743 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934029752817810400881743 /* SplashScreenViewController.swift */; };
+		934E074228185D5C00C431B3 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934E074128185D5C00C431B3 /* APIKeys.swift */; };
 		937DF8DF2817324900E49CB9 /* GolfTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937DF8DE2817324900E49CB9 /* GolfTableViewCell.swift */; };
 		93EEEC072816EE9600D3E757 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EEEC062816EE9600D3E757 /* AppDelegate.swift */; };
 		93EEEC092816EE9600D3E757 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EEEC082816EE9600D3E757 /* SceneDelegate.swift */; };
@@ -21,8 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50E5BD3AC0DBEC3B93EE115B /* Pods-How'd You Shoot?.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-How'd You Shoot?.debug.xcconfig"; path = "Target Support Files/Pods-How'd You Shoot?/Pods-How'd You Shoot?.debug.xcconfig"; sourceTree = "<group>"; };
+		861E259A48C8B1BD98B08F2F /* libPods-How'd You Shoot?.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-How'd You Shoot?.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9330148B281752D500807B5F /* GetGolfData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGolfData.swift; sourceTree = "<group>"; };
 		934029752817810400881743 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		934E074128185D5C00C431B3 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		937DF8DE2817324900E49CB9 /* GolfTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GolfTableViewCell.swift; sourceTree = "<group>"; };
 		93EEEC032816EE9600D3E757 /* How'd You Shoot?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How'd You Shoot?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EEEC062816EE9600D3E757 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +39,7 @@
 		93EEEC142816EEAC00D3E757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93EEEC1A2817031A00D3E757 /* GolfData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GolfData.swift; sourceTree = "<group>"; };
 		93EEEC1C2817036700D3E757 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9A0508C1F6DC5EE901700D5B /* Pods-How'd You Shoot?.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-How'd You Shoot?.release.xcconfig"; path = "Target Support Files/Pods-How'd You Shoot?/Pods-How'd You Shoot?.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +47,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				667B402AB749B23BA4CBFDC5 /* libPods-How'd You Shoot?.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		674641A5F3D009B39CE99362 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50E5BD3AC0DBEC3B93EE115B /* Pods-How'd You Shoot?.debug.xcconfig */,
+				9A0508C1F6DC5EE901700D5B /* Pods-How'd You Shoot?.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8D95D601DC35589CB08ECE57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				861E259A48C8B1BD98B08F2F /* libPods-How'd You Shoot?.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		93EEEBFA2816EE9400D3E757 = {
 			isa = PBXGroup;
 			children = (
 				93EEEC052816EE9600D3E757 /* How'd You Shoot? */,
 				93EEEC042816EE9600D3E757 /* Products */,
+				674641A5F3D009B39CE99362 /* Pods */,
+				8D95D601DC35589CB08ECE57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +101,7 @@
 				93EEEC1C2817036700D3E757 /* DetailViewController.swift */,
 				934029752817810400881743 /* SplashScreenViewController.swift */,
 				937DF8DE2817324900E49CB9 /* GolfTableViewCell.swift */,
+				934E074128185D5C00C431B3 /* APIKeys.swift */,
 				93EEEC0C2816EE9600D3E757 /* Main.storyboard */,
 				93EEEC0F2816EEAC00D3E757 /* Assets.xcassets */,
 				93EEEC112816EEAC00D3E757 /* LaunchScreen.storyboard */,
@@ -89,9 +117,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93EEEC172816EEAC00D3E757 /* Build configuration list for PBXNativeTarget "How'd You Shoot?" */;
 			buildPhases = (
+				F42010B35E45EE7231CE560F /* [CP] Check Pods Manifest.lock */,
 				93EEEBFF2816EE9500D3E757 /* Sources */,
 				93EEEC002816EE9500D3E757 /* Frameworks */,
 				93EEEC012816EE9500D3E757 /* Resources */,
+				62A2D6AA987929002834CE19 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +178,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		62A2D6AA987929002834CE19 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-How'd You Shoot?/Pods-How'd You Shoot?-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-How'd You Shoot?/Pods-How'd You Shoot?-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-How'd You Shoot?/Pods-How'd You Shoot?-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F42010B35E45EE7231CE560F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-How'd You Shoot?-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		93EEEBFF2816EE9500D3E757 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -156,6 +228,7 @@
 				93EEEC0B2816EE9600D3E757 /* ViewController.swift in Sources */,
 				9330148C281752D500807B5F /* GetGolfData.swift in Sources */,
 				934029762817810400881743 /* SplashScreenViewController.swift in Sources */,
+				934E074228185D5C00C431B3 /* APIKeys.swift in Sources */,
 				93EEEC072816EE9600D3E757 /* AppDelegate.swift in Sources */,
 				93EEEC1D2817036700D3E757 /* DetailViewController.swift in Sources */,
 				93EEEC092816EE9600D3E757 /* SceneDelegate.swift in Sources */,
@@ -302,6 +375,7 @@
 		};
 		93EEEC182816EEAC00D3E757 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50E5BD3AC0DBEC3B93EE115B /* Pods-How'd You Shoot?.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -330,6 +404,7 @@
 		};
 		93EEEC192816EEAC00D3E757 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A0508C1F6DC5EE901700D5B /* Pods-How'd You Shoot?.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

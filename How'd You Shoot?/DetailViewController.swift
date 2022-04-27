@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GooglePlaces
 
 private let dateFormatter: DateFormatter = {
     let dateFormatter = DateFormatter()
@@ -74,7 +75,7 @@ class DetailViewController: UIViewController {
     }
     
     func enableDisableSaveButton(text: String) {
-        if text.count > 0 {
+        if text.count > 1 {
             saveBarButton.isEnabled = true
         } else {
             saveBarButton.isEnabled = false
@@ -95,5 +96,32 @@ class DetailViewController: UIViewController {
         }
     }
     
+    @IBAction func lookupButtonPressed(_ sender: UIBarButtonItem) {
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        present(autocompleteController, animated: true, completion: nil)
+        
+    }
     
+}
+
+extension DetailViewController: GMSAutocompleteViewControllerDelegate {
+
+  // Handle the user's selection.
+  func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+      
+    golfData.course = place.name ?? "Unknown Course"
+    updateUserInterface()
+    dismiss(animated: true, completion: nil)
+  }
+
+  func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+    print("Error: ", error.localizedDescription)
+  }
+
+  // User canceled the operation.
+  func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+    dismiss(animated: true, completion: nil)
+  }
+
 }
