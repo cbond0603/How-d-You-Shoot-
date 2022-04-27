@@ -40,6 +40,10 @@ class DetailViewController: UIViewController {
             golfData = GolfData(course: "", score: 0 , date: Date().addingTimeInterval(24*60*60), p2Name: "", p2Score: 0, p3Name: "", p3Score: 0, p4Name: "", p4Score: 0)
         }
         updateUserInterface()
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
     }
     
     private let dateFormatter: DateFormatter = {
@@ -75,13 +79,12 @@ class DetailViewController: UIViewController {
     }
     
     func enableDisableSaveButton(text: String) {
-        if text.count > 1 {
+        if text.count >= 2 {
             saveBarButton.isEnabled = true
         } else {
             saveBarButton.isEnabled = false
         }
     }
-    
     
     @IBAction func textFieldEditingChanged(_ sender: UITextField) {
         enableDisableSaveButton(text: sender.text!)

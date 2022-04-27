@@ -18,6 +18,7 @@ class SplashScreenViewController: UIViewController {
     @IBOutlet weak var totalStaticLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var aboutButton: UIButton!
     
     var golfData: GolfData!
     var golfDataArray: [GolfData] = []
@@ -39,6 +40,7 @@ class SplashScreenViewController: UIViewController {
         totalLabel.alpha = 0.0
         totalStaticLabel.alpha = 0.0
         cameraButton.alpha = 0.0
+        aboutButton.alpha = 0.0
         
         getGolfData.loadData {
         }
@@ -54,7 +56,7 @@ class SplashScreenViewController: UIViewController {
         })
         
         UIView.animate(withDuration: 1.0, delay: 1.0, animations:
-                        {self.bestLabel.alpha = 1.0; self.bestStaticLabel.alpha = 1.0; self.averageLabel.alpha = 1.0; self.averageStaticLabel.alpha = 1.0; self.totalLabel.alpha = 1.0; self.totalStaticLabel.alpha = 1.0; self.cameraButton.alpha = 1.0})
+                        {self.bestLabel.alpha = 1.0; self.bestStaticLabel.alpha = 1.0; self.averageLabel.alpha = 1.0; self.averageStaticLabel.alpha = 1.0; self.totalLabel.alpha = 1.0; self.totalStaticLabel.alpha = 1.0; self.cameraButton.alpha = 1.0; self.aboutButton.alpha = 1.0})
         
     }
     
@@ -112,6 +114,12 @@ class SplashScreenViewController: UIViewController {
         }
     }
     
+    @IBAction func unwindBackFromAboutPressed(segue: UIStoryboardSegue) {
+        if segue.identifier == "backPressedUnwind" {
+            performSegue(withIdentifier: "ShowAbout", sender: nil)
+            
+        }
+    }
 }
 
 extension SplashScreenViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

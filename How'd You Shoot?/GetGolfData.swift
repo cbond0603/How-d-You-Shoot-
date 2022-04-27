@@ -19,6 +19,8 @@ class GetGolfData {
         let jsonDecoder = JSONDecoder()
         do {
             golfDataArray = try jsonDecoder.decode(Array<GolfData>.self, from: data)
+            // in todo list this is an array of things to do, but here we just want one image saved and loaded
+            // golfUploadedImage = try jsonDecorder.decode(__ golf image __ ) 
         } catch {
             print("ERROR: Could not load Data \(error.localizedDescription)")
         }
