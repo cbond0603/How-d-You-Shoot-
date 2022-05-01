@@ -62,6 +62,8 @@ class SplashScreenViewController: UIViewController {
     
     @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
         performSegue(withIdentifier: "ShowTableView", sender: sender)
+        
+        
         getGolfData.saveData()
     }
     
@@ -110,14 +112,14 @@ class SplashScreenViewController: UIViewController {
     @IBAction func unwindHomePressed(segue: UIStoryboardSegue) {
         if segue.identifier == "homePressedUnwind" {
             performSegue(withIdentifier: "ShowTableView", sender: nil)
-            
         }
+        getGolfData.saveData()
+
     }
     
     @IBAction func unwindBackFromAboutPressed(segue: UIStoryboardSegue) {
         if segue.identifier == "backPressedUnwind" {
             performSegue(withIdentifier: "ShowAbout", sender: nil)
-            
         }
     }
 }

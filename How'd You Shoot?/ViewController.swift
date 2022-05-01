@@ -41,9 +41,9 @@ class ViewController: UIViewController {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 tableView.deselectRow(at: selectedIndexPath, animated: true)
             }
-                
         }
     }
+    
     @IBAction func unwindFromDetail(segue: UIStoryboardSegue) {
         let source = segue.source as! DetailViewController
         if let selectedIndexPath = tableView.indexPathForSelectedRow {
@@ -68,6 +68,7 @@ class ViewController: UIViewController {
             sender.title = "Done"
             addBarButton.isEnabled = false
         }
+        getGolfData.saveData()
     }
 }
 
@@ -87,8 +88,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         if editingStyle == .delete {
             getGolfData.golfDataArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            getGolfData.saveData()
         }
+        getGolfData.saveData()
+
     }
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let itemToMove = getGolfData.golfDataArray[sourceIndexPath.row]
@@ -96,4 +98,5 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         getGolfData.golfDataArray.insert(itemToMove, at: destinationIndexPath.row)
         getGolfData.saveData()
     }
+
 }
