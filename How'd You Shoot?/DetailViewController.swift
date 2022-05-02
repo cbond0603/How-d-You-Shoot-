@@ -30,9 +30,6 @@ class DetailViewController: UIViewController {
     
     var golfData: GolfData!
     
-
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,8 +68,18 @@ class DetailViewController: UIViewController {
         enableDisableSaveButton(text: courseTextField.text!)
 
     }
-
-
+    
+    
+    @IBAction func returnButtonPressed(_ sender: UIKeyCommand) {
+        
+        if sender == p2NameTextField {
+            p2NameTextField.resignFirstResponder()
+        } else if sender == p3NameTextField {
+            p3NameTextField.resignFirstResponder()
+        } else {
+            p4NameTextField.resignFirstResponder()
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         golfData = GolfData(course: courseTextField.text!, score: Int(scoreTextField.text ?? "")!, date: datePicker.date, p2Name: p2NameTextField.text!, p2Score: Int(p2ScoreTextField.text ?? "")!, p3Name: p3NameTextField.text!, p3Score: Int(p3ScoreTextField.text ?? "")!, p4Name: p4NameTextField.text!, p4Score: Int(p4ScoreTextField.text ?? "")!)

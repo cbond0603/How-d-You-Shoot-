@@ -45,11 +45,17 @@ class SplashScreenViewController: UIViewController {
         getGolfData.loadData {
         }
         
-        totalLabel.text = "\(getGolfData.golfDataArray.count)"
-        bestLabel.text = "\(calc().1)"
-        averageLabel.text = "\(calc().0/(getGolfData.golfDataArray.count))"
-
         
+        if getGolfData.golfDataArray.count == 0 {
+            totalLabel.text = "N/A"
+            bestLabel.text = "N/A"
+            averageLabel.text = "N/A"
+        } else {
+            totalLabel.text = "\(getGolfData.golfDataArray.count)"
+            bestLabel.text = "\(calc().1)"
+            averageLabel.text = "\(calc().0/(getGolfData.golfDataArray.count))"
+        }
+                
         
         UIView.animate(withDuration: 1.0, animations: {
             self.imageView.frame.origin.y = 0

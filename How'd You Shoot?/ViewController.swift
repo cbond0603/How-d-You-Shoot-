@@ -89,6 +89,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             getGolfData.golfDataArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+        tableView.reloadData()
+
         getGolfData.saveData()
 
     }
@@ -96,6 +98,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let itemToMove = getGolfData.golfDataArray[sourceIndexPath.row]
         getGolfData.golfDataArray.remove(at: sourceIndexPath.row)
         getGolfData.golfDataArray.insert(itemToMove, at: destinationIndexPath.row)
+        tableView.reloadData()
+
         getGolfData.saveData()
     }
 
